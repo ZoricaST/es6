@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ES6 W3</title>
+  </head>
+  <body>
+    <h2>1. Let and const</h2>
+    <p id="demo1"></p>
+
+    <h2>2. The ** Operator</h2>
+    <p id="demo2"></p>
+
+    <h2>3. Default Parameter Values</h2>
+    <p id="demo3"></p>
+
+    <script>
+      //JavaScript let
+      var x = 20;
+      // Here x is 20
+      {
+        let x = 5;
+        // Here x is 5
+      }
+
+      //JavaScript const
+      {
+        const x = 7;
+        // Here x is 7
+      }
+      // Here x is 20
+      document.getElementById("demo1").innerHTML = x;
+
+      var y = 7;
+      document.getElementById("demo2").innerHTML = y ** 2;
+
+      function myFunction(x3, y3 = 15) {
+        // y is 15 if not passed or undefined
+        return x3 + y3;
+      }
+      document.getElementById("demo3").innerHTML = myFunction(3);
+    </script>
+
+    <h2>4. JavaScript Array.find()</h2>
+
+    <p id="demo4"></p>
+
+    <h2>5. JavaScript Array.findIndex()</h2>
+
+    <p id="demo5"></p>
+    <script>
+      // Array.find()
+      var numbers = [5, 7, 11, 24, 31];
+      var first = numbers.find(myTest);
+
+      document.getElementById("demo4").innerHTML =
+        "First number over 17 is " + first;
+
+      function myTest(value, index, array) {
+        return value > 17;
+      }
+
+      // Array.findIndex()
+      var numbers = [4, 9, 16, 17, 25, 29];
+      var first = numbers.findIndex(fja);
+
+      document.getElementById("demo5").innerHTML =
+        "First number over 18 has index " + first;
+
+      function fja(value, index, array) {
+        return value > 26;}
+    </script>
+
+    <h2>6. Number Object Properties</h2>
+
+    <p>EPSILON</p>
+
+    <p id="demo6"></p>
+
+    <script>
+      var x6 = Number.EPSILON;
+      document.getElementById("demo6").innerHTML = x6;
+    </script>
+
+
+<p>MIN_SAFE_INTEGER</p>
+
+<p id="demo7"></p>
+
+<script>
+var  x7 = Number.MIN_SAFE_INTEGER;
+document.getElementById("demo7").innerHTML = x7;
+</script>
+
+<p>MAX_SAFE_INTEGER</p>
+
+<p id="demo8"></p>
+
+<script>
+var  x8 = Number.MAX_SAFE_INTEGER;
+document.getElementById("demo8").innerHTML = x8;
+</script>
+
+
+<h2>9. JavaScript Number Methods</h2>
+
+<p>The isInteger() method returns true if the argument is an integer.</p>
+<p>Otherwise it returns false.</p>
+
+<p id="demo9"></p>
+
+<script>
+document.getElementById("demo9").innerHTML =
+Number.isInteger(10) + "<br>" + Number.isInteger(10.5);
+</script>
+
+
+<h2>10. The isSafeInteger() method returns true if the argument is a safe integer.</h2>
+<p>Otherwise it returns false.</p>
+
+<p id="demo10"></p>
+
+<script>
+document.getElementById("demo10").innerHTML =
+Number.isSafeInteger(10) + "<br>" + Number.isSafeInteger(12345678901234567890);
+</script>
+
+<h2>11. JavaScript Number Methods</h2>
+
+<p>The isFinite() method returns false if the argument is Infinity or NaN.</p>
+<p>Otherwise it returns true.</p>
+
+<p id="demo11"></p>
+
+<script>
+document.getElementById("demo11").innerHTML =
+isFinite(10 / 0) + "<br>" + isFinite(10 / 1);
+</script>
+
+<h2>12. JavaScript Number Methods</h2>
+
+<p>The isNan() method returns true if the argument is NaN. Otherwise it returns false.</p>
+
+<p id="demo12"></p>
+
+<script>
+document.getElementById("demo12").innerHTML =
+isNaN("Zdravo") + "<br>" + isNaN("10");
+</script>
+
+<h2>13. JavaScript Arrow Functions</h2>
+
+<p>With arrow functions, you don't have to type the function keyword, the return keyword, and the curly brackets.</p>
+
+<p>Arrow functions are not supported in IE11 or earlier.</p>
+
+<p id="demo13"></p>
+
+<script>
+const x13 = (x13, y13) => x13 * y13;
+document.getElementById("demo13").innerHTML = x13(5, 5);
+</script>
+  </body>
+</html>
